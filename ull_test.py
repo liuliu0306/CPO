@@ -53,10 +53,10 @@ class TestMutableULList(unittest.TestCase):
     def test_set_element(self):
         print('Testing set_element...')
         ull = UnrolledLinkedList(4)
-        key, value = 1, 999
         lit = [1, 2, 3, 4]
         ull.from_list(lit)
-        self.assertEqual(ull.set_element(key, value).to_list(), lit)
+        self.assertEqual(ull.set_element(1, 999).to_list(), [1, 999, 3, 4])
+     
      
     def test_ull_filter(self):
         print('Testing ull_filter...')
