@@ -48,15 +48,15 @@ class TestMutableULList(unittest.TestCase):
         ull.add(2)
         ull.add(3)
         ull.add(4)
-        self.assertEqual( ull.size(), 4 )
+        self.assertEqual(ull.size(), 4)
         
     def test_set_element(self):
         print('Testing set_element...')
         ull = UnrolledLinkedList(4)
-        key, value = 1,999
-        ull.from_list([1, 2, 3, 4])
-        self.assertEqual(ull.set_element(key, value).to_list(), \
-                         [1, 999, 3, 4])
+        key, value = 1, 999
+        lit = [1, 2, 3, 4]
+        ull.from_list(lit)
+        self.assertEqual(ull.set_element(key, value).to_list(), lit)
      
     def test_ull_filter(self):
         print('Testing ull_filter...')
@@ -69,14 +69,14 @@ class TestMutableULList(unittest.TestCase):
         print('Testing ull_map...')
         ull = UnrolledLinkedList(4)
         ull.from_list([1, 2, 3, 4])
-        ull.ull_map(lambda x:x**2)
+        ull.ull_map(lambda x: x**2)
         self.assertEqual(ull.to_list(), [1, 4, 9, 16])
         
     def test_ull_reduce(self):
         print('Testing ull_reduce...')
         ull = UnrolledLinkedList(4)
         ull.from_list([1, 2, 3, 4])   
-        self.assertEqual(ull.ull_reduce(lambda x, y:x+y), 10)
+        self.assertEqual(ull.ull_reduce(lambda x, y: x+y), 10)
         
     def test_empty_and_concat(self):
         print('Testing empty_and_concat...')
@@ -106,9 +106,11 @@ class TestMutableULList(unittest.TestCase):
         b = ull.is_member(3)
         self.assertEqual(b, True)
         b = ull.is_member(5)
-        self.assertEqual(b, False)     
+        self.assertEqual(b, False)
+        
     # ---------------------------------------------
     # then we use PBT test!
+    
     @settings(max_examples=10)
     @given(st.lists(st.integers()))
     def test_reverse_PBT(self, a):
@@ -118,8 +120,7 @@ class TestMutableULList(unittest.TestCase):
         if b is not None:
             temp = ull.reverse().to_list()
             if((a.reverse() is not None) & (temp != []) &\
-               (type(temp.reverse()) != 'NoneType') &\
-                   (type(a.reverse()) != 'NoneType')):
+               (type(temp.reverse()) != 'NoneType') & (type(a.reverse()) != 'NoneType')):
                 self.assertEqual(temp, a.reverse()) 
                 
     @settings(max_examples=10)
@@ -130,5 +131,6 @@ class TestMutableULList(unittest.TestCase):
         b = ull.is_member(a)
         self.assertEqual(b, True)
  
+
 if __name__ == '__main__':
     unittest.main()
