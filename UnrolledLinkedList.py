@@ -158,3 +158,4 @@ class UnrolledLinkedList:
 
     def concat(self, a, b):
         return a*b
+
