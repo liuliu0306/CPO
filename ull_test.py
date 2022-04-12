@@ -119,8 +119,7 @@ class TestMutableULList(unittest.TestCase):
         b = ull.reverse()
         if b is not None:
             temp = ull.reverse().to_list()
-            if((a.reverse() is not None) & (temp != []) &\
-               (type(temp.reverse()) != 'NoneType') & (type(a.reverse()) != 'NoneType')):
+            if(a.reverse() is not None) & (temp != []):
                 self.assertEqual(temp, a.reverse()) 
                 
     @settings(max_examples=10)
