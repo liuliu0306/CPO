@@ -74,7 +74,7 @@ class TestMutableULList(unittest.TestCase):
     def test_ull_reduce(self):
         print('Testing ull_reduce...')
         ull = UnrolledLinkedList(4)
-        ull.from_list([1, 2, 3, 4])   
+        ull.from_list([1, 2, 3, 4])
         self.assertEqual(ull.ull_reduce(lambda x, y: x+y), 10)
 
     def test_empty_and_concat(self):
@@ -96,7 +96,7 @@ class TestMutableULList(unittest.TestCase):
         ull = UnrolledLinkedList(4)
         ull.from_list([1, 2, 3, 4])
         b = ull.reverse()
-        self.assertEqual(b.to_list(), [4, 3, 2, 1]) 
+        self.assertEqual(b.to_list(), [4, 3, 2, 1])
 
     def test_is_member(self):
         print('Testing is_member...')
@@ -119,7 +119,7 @@ class TestMutableULList(unittest.TestCase):
         if b is not None:
             temp = ull.reverse().to_list()
             if(a.reverse() is not None) & (temp != []):
-                self.assertEqual(temp, a.reverse()) 
+                self.assertEqual(temp, a.reverse())
 
     @settings(max_examples=10)
     @given(st.integers())
