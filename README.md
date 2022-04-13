@@ -1,6 +1,7 @@
 # GROUP -> HDU123 - Liu Riheng & Chen Weite - lab 1 - variant 1
 # Student number:
-Liu Riheng 212320037\n
+Liu Riheng 212320037
+
 Chen Weite 212320039
 
 # Laboratory work description
