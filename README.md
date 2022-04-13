@@ -31,10 +31,10 @@ After GitHub active, we passed all tests.
 ## Changelog
 
 - 13.04.2022 - 0
-   Initial
-   Implement `UnrolledLinkedList.py` and `ull_test.py`
-   GitHub active successfully.
-   Update README.
+   1.Initial
+   2.Implement `UnrolledLinkedList.py` and `ull_test.py`
+   3.GitHub active successfully.
+   4.Update README.
 
 
 
