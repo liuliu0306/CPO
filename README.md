@@ -1,32 +1,39 @@
-# GROUP-NAME - lab NUMBER - variant NUMBER
+# GROUP-Liu Riheng & Chen Weite - lab 1 - variant 1
+# Student number:
+Liu Riheng 212320037
+Chen Weite 212320039
 
-This is an example project which demonstrates project structure and necessary
-CI checks. It is not the best structure for real-world projects, but good
-enough for educational purposes.
+# Laboratory work description
+Lab1 includes the definition of unrolled linked list data structure and the implementation of data structure related mutable algorithms.
+We implemented at least 18 methods. Then we test the data structure and its algorithms using unit tests and PBT tests. 
+After GitHub active, we passed all tests.
+
 
 ## Project structure
 
-- `foo.py` -- implementation of `Foo` class with `hello` and `add` features.
-   Stateless.
-- `foo_test.py` -- unit and PBT tests for `Foo`.
+- `UnrolledLinkedList.py` -- implementation of `UnrolledLinkedList` and `Node` class with more than 18 methods.
+   
+- `ull_test.py` -- unit and PBT tests for `UnrolledLinkedList`.
 
-## Features
-
-- PBT: `test_add_commutative`
 
 ## Contribution
-
-- Aleksandr Penskoi (EMAIL) -- all work.
+- Liu Riheng 
+   1.Define data structures and implement basic methods such as adding, deleting, traversal, etc.
+   2.Implement `ull_test.py` which include unit and PBT tests.
+   3.Complete readme and GitHub active.
+- Chen Weite
+   1.Implement other methods of UnrolledLinkedList.
+   2.Check code style and unify code formatting.
+   3.Collect the resources required by lab1, including the use of software, the description of data structure. 
 
 ## Changelog
 
-- 29.03.2022 - 2
-  - Add test coverage.
-- 29.03.2022 - 1
-  - Update README. Add formal sections.
-- 29.03.2022 - 0
-  - Initial
+- 13.04.2022 - 0
+- Initial
+- Implement `UnrolledLinkedList.py` and `ull_test.py`
+- GitHub active successfully.
+- Update README.
 
-## Design notes
 
-- ...
+
+
