@@ -19,7 +19,7 @@ class TestMutableULList(unittest.TestCase):
         ull.add(1)
         self.assertEqual(ull.to_list(), [1])
         ull.add(2)
-        self.assertEqual(ull.to_list(), [1,2])
+        self.assertEqual(ull.to_list(), [1, 2])
         ull.remove(1)
         self.assertEqual(ull.to_list(), [2])
         ull.remove(2)
@@ -122,7 +122,7 @@ class TestMutableULList(unittest.TestCase):
     def test_concat_PBT(self, a):
         ull = UnrolledLinkedList()
         ullcp = UnrolledLinkedList()
-        ull.from_list([1,2,3])
+        ull.from_list([1, 2, 3])
         ullcp.from_list(a)
         result = ull.to_list()+ullcp.to_list()
         ull_list = ull.concat(ullcp).to_list()
@@ -138,8 +138,8 @@ class TestMutableULList(unittest.TestCase):
         ull2.from_list(a)
         ull3.from_list(a)
         # test identity element
-        ie1 = ull1.concat(ull2,empty=ull1).to_list()
-        ie2 = ull2.concat(ull1,empty=ull1).to_list()
+        ie1 = ull1.concat(ull2, empty=ull1).to_list()
+        ie2 = ull2.concat(ull1, empty=ull1).to_list()
         self.assertEqual(ie1, ie2)
         # test associativity
         obj1 = ull1.concat(ull2).concat(ull3).to_list()
