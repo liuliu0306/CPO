@@ -48,4 +48,4 @@ Initial
 5. test_add_and_remove — you don’t actually check add and remove function. You need to check that data actually changed inside. Rewrite it.
 6. Make `capacity` argument optimal for UnrolledLinkedList constructor.
 7. Your iterator implementation is limited. Test that the two iterators on one data structure should work in parallel correctly.
-0.All the above tasks are completed!
+  All the above tasks are completed!
