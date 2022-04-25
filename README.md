@@ -44,6 +44,7 @@ the description of data structure.
 - 13.04.2022 - 0
 
 Initial
+
 1.Implement `UnrolledLinkedList.py` and `ull_test.py`
 2.GitHub active successfully
 3.Update README
@@ -51,6 +52,7 @@ Initial
 - 25.04.2022 - 0
 
 Issue
+
 1. Bad naming. Read about how to name modules and tests for them
 2. Update GitHub action configuration from the template
 3. Incorrect concat  implementation. Check the task. Rewrite tests
