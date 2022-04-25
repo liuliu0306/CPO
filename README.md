@@ -8,15 +8,17 @@ Chen Weite 212320039
 
 ## Laboratory work description
 
-Lab1 includes the definition of unrolled linked list data structure and the implementation of data structure related mutable algorithms.
-We implemented at least 18 methods. Then we test the data structure and its algorithms using unit tests and PBT tests.
+Lab1 includes the definition of unrolled linked list data structure and the implementation of 
+data structure related mutable algorithms.
+We implemented at least 18 methods. Then we test the data structure 
+and its algorithms using unit tests and PBT tests.
 After GitHub active, we passed all tests.
-
 
 ## Project structure
 
-- `UnrolledLinkedList.py` -- implementation of `UnrolledLinkedList` and `Node` class with more than 18 methods.
-   
+- `UnrolledLinkedList.py` -- implementation of `UnrolledLinkedList` 
+and `Node` class with more than 18 methods.
+
 - `ull_test.py` -- unit and PBT tests for `UnrolledLinkedList`.
 
 - .github/workflows/check.yml -- for GitHub active.
@@ -30,7 +32,8 @@ After GitHub active, we passed all tests.
 - Chen Weite
    1.Implement other methods of UnrolledLinkedList.
    2.Check code style and unify code formatting.
-   3.Collect the resources required by lab1, including the use of software, the description of data structure.
+   3.Collect the resources required by lab1, including the use of software,
+the description of data structure.
 
 ## Changelog
 
@@ -45,8 +48,10 @@ Initial
 2. Update GitHub action configuration from the template.
 3. Incorrect concat  implementation. Check the task. Rewrite tests.
 4. Not all PBT tests implemented. You need to check all monoid properties.
-5. test_add_and_remove — you don’t actually check add and remove function. You need to check that data actually changed inside. Rewrite it.
-6. Make `capacity` argument optimal for UnrolledLinkedList constructor.
-7. Your iterator implementation is limited. Test that the two iterators on one data structure should work in parallel correctly.
+5. test_add_and_remove — you don’t actually check add and remove function. 
+You need to check that data actually changed inside. Rewrite it.
+7. Make `capacity` argument optimal for UnrolledLinkedList constructor.
+8. Your iterator implementation is limited. Test that the two iterators on one 
+data structure should work in parallel correctly.
 - 25.04.2022 - 1
-1. All the above tasks are completed!
+10. All the above tasks are completed!
