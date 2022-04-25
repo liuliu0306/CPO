@@ -51,13 +51,12 @@ Initial
 
 - 25.04.2022 - 0
 
-1. Bad naming. Read about how to name modules and tests for them
-2. Update GitHub action configuration from the template
-3. Incorrect concat  implementation. Check the task. Rewrite tests
-4. Not all PBT tests implemented. You need to check all monoid properties
-5. test_add_and_remove — you don’t actually check add and remove function
-6. Make `capacity` argument optimal for UnrolledLinkedList constructor
-7. Your iterator implementation is limited
+1. Module has been renamed. 2. Updated GitHub action configuration from the 
+template. 3. Rewritten concat method. 
+4. Tested all monoid properties with PBT. 
+5. Rewritten test_add_and_remove method. 
+6. Make `capacity` argument optimal for UnrolledLinkedList 
+constructor. 7 .Rewrite the iterator
 
 - 25.04.2022 - 1
 
