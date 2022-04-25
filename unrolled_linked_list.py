@@ -42,7 +42,7 @@ class UnrolledLinkedList:
 
     def __iter__(self):
         return Next(self.wrapped)
-    
+
     # this method inserts the given value in the list
     def add(self, value):
         if self.head is None:
@@ -74,9 +74,8 @@ class UnrolledLinkedList:
             print()
             temp = temp.next
 
-
     def remove(self, value, ull_type='value'):
-        # find the given value and delete it 
+        # find the given value and delete it
         temp = self.head
         count = -1
         while temp:
@@ -95,11 +94,11 @@ class UnrolledLinkedList:
                     temp.array.pop(i)
                     temp.array.append(None)
                     temp.length -= 1
-                    while temp.length < (self.capacity//2) and temp.next:
+                    while temp.length < (self.capacity // 2) and temp.next:
                         temp.array[temp.length] = temp.next.array.pop(0)
                         temp.length +=1
                         temp.next.length -= 1
-                    if temp.next and temp.next.length < (self.capacity//2):
+                    if temp.next and temp.next.length < (self.capacity // 2):
                         t = temp.length
                         q = temp.next.length
                         temp.array[t:t+q] = temp.next.array[:q]
@@ -155,17 +154,17 @@ class UnrolledLinkedList:
         if (condition == 'iseven'):
             [self.remove(cyi,'list') for cyi in range(self.size()//2)]
 
-    def ull_map(self,function):
+    def ull_map(self, function):
         p = self.head
         while p:
             for cyi in range(p.length):
                 p.array[cyi] = function(p.array[cyi])
             p = p.next
 
-    def ull_reduce(self,function):
+    def ull_reduce(self, function):
         # iterative processing
         ull_list = self.to_list()
-        for _ in range( len(ull_list)-1 ):
+        for _ in range(len(ull_list)-1):
             ull_list[0] = function(ull_list[0], ull_list[1])
             ull_list.pop(1)
         return ull_list[0]
