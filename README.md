@@ -17,8 +17,8 @@ After GitHub active, we passed all tests.
 
 ## Project structure
 
-- `UnrolledLinkedList.py` -- implementation of `UnrolledLinkedList`
-and `Node` class with more than 18 methods.
+- `UnrolledLinkedList.py` -- implementation of `UnrolledLinkedList`  and `Node` class with more than 18 methods.
+
 
 - `ull_test.py` -- unit and PBT tests for `UnrolledLinkedList`.
 
@@ -41,12 +41,14 @@ the description of data structure.
 ## Changelog
 
 - 13.04.2022 - 0
+
 Initial
 1.Implement `UnrolledLinkedList.py` and `ull_test.py`
 2.GitHub active successfully
 3.Update README
 
 - 25.04.2022 - 0
+
 1. Bad naming. Read about how to name modules and tests for them.
 2. Update GitHub action configuration from the template.
 3. Incorrect concat  implementation. Check the task. Rewrite tests.
@@ -56,5 +58,7 @@ You need to check that data actually changed inside. Rewrite it.
 7. Make `capacity` argument optimal for UnrolledLinkedList constructor.
 8. Your iterator implementation is limited. Test that the two iterators on one
 data structure should work in parallel correctly.
+
 - 25.04.2022 - 1
-10. All the above tasks are completed!
+
+1. All the above tasks are completed!
