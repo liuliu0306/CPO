@@ -5,11 +5,12 @@ Created on Mon Apr 11 10:40:54 2022
 @author: liurh
 """
 
+
 class Node:
     def __init__(self):
-      self.length = 0
-      self.array = []
-      self.next = None
+        self.length = 0
+        self.array = []
+        self.next = None
 
 
 class Next:
@@ -27,42 +28,42 @@ class Next:
             item = self.wrapped.to_list()[self.offset]
             self.offset += 1
             return item
-        
+
 
 class UnrolledLinkedList:
     def __init__(self, capacity=4):
-      # maximum capacity of an array in node
-      self.capacity = capacity
-      self.head = None
-      self.tail = None
-      self.ull_iter = []
-      self.s = []
-      self.wrapped = self
-      
+        # maximum capacity of an array in node
+        self.capacity = capacity
+        self.head = None
+        self.tail = None
+        self.ull_iter = []
+        self.s = []
+        self.wrapped = self
+
     def __iter__(self):
-      return Next(self.wrapped)
+        return Next(self.wrapped)
     
     # this method inserts the given value in the list
     def add(self, value):
-        if self.head is None: #unrolled linked is empty
+        if self.head is None:
             self.head = Node()
-            self.head.array.append(value) # add the value
+            self.head.array.append(value)
             self.head.length += 1
             self.tail = self.head
-        elif self.tail.length + 1 <= self.capacity: # current node's capacity is not full
-            self.tail.array.append(value) # add the given value
+        elif self.tail.length + 1 <= self.capacity:
+            self.tail.array.append(value)
             self.tail.length += 1
-        else: # current node's capacity is full
-            new_node = Node() # create a new node
-            # move final half of elements from the current node to the new node
-            half_length = self.tail.length//2 
-            new_node.array.extend(self.tail.array[half_length:])
-            new_node.array.append(value) # add the given value to the new node
+        else:
+            new_node = Node()
+            half_length = self.tail.length//2
+            tmp = self.tail.array[half_length:]
+            new_node.array.extend(tmp)
+            new_node.array.append(value)
             # Update
-            new_node.length = len(new_node.array) # set the length of the new node's array
-            self.tail.length = half_length # update the length of the current node's array
-            self.tail.next = new_node # make current node next pointer refer to the new node
-            self.tail = new_node # update the tail
+            new_node.length = len(new_node.array)
+            self.tail.length = half_length
+            self.tail.next = new_node
+            self.tail = new_node
 
     # prints all the elements of the unrolled linked list
     def traversal(self):
@@ -73,40 +74,40 @@ class UnrolledLinkedList:
             print()
             temp = temp.next
 
-    # This method removes the first appearance of the given value
+
     def remove(self, value, ull_type='value'):
-      # find the given value and delete it 
-      temp = self.head
-      count = -1
-      while temp:
-        for i in range(0, temp.length):
-          count += 1
-          if (type(temp.array[i]) == dict) & (ull_type == 'dict'):
-              temp.array[i] = list(temp.array[i].keys())[0]
-          elif (ull_type == 'list'):
-              if(count == value):     
-                  temp.array[i] = value
-              else:
-                  continue
-          if temp.array[i] == value:
-            temp.array.pop(i) # remove the given value from the array
-            temp.array.append(None)
-            temp.length -= 1 # decrease the length
-            # if the current node's length is less than 50% then move elements from next node's array to the current one
-            while temp.length < (self.capacity//2) and temp.next:
-              temp.array[temp.length] = temp.next.array.pop(0)
-              temp.length +=1
-              temp.next.length -= 1
-            # if the next node's length is less than 50%  then merge the two halves
-            if temp.next and temp.next.length < (self.capacity//2) : 
-              temp.array[temp.length:temp.length+temp.next.length] = temp.next.array[:temp.next.length]
-              temp.length += temp.next.length
-              # deleted_node = temp.next
-              temp.next = temp.next.next
-              # del deleted_node
-            return
-        temp = temp.next
-      raise ValueError(f'Value {value} does not exist in the list')
+        # find the given value and delete it 
+        temp = self.head
+        count = -1
+        while temp:
+            for i in range(0, temp.length):
+                count += 1
+                con1 = (type(temp.array[i]) == dict)
+                con2 = (ull_type == 'dict')
+                if con1 & con2:
+                    temp.array[i] = list(temp.array[i].keys())[0]
+                elif (ull_type == 'list'):
+                    if(count == value):
+                        temp.array[i] = value
+                    else:
+                        continue
+                if temp.array[i] == value:
+                    temp.array.pop(i)
+                    temp.array.append(None)
+                    temp.length -= 1
+                    while temp.length < (self.capacity//2) and temp.next:
+                        temp.array[temp.length] = temp.next.array.pop(0)
+                        temp.length +=1
+                        temp.next.length -= 1
+                    if temp.next and temp.next.length < (self.capacity//2):
+                        t = temp.length
+                        q = temp.next.length
+                        temp.array[t:t+q] = temp.next.array[:q]
+                        temp.length += temp.next.length
+                        temp.next = temp.next.next
+                    return
+            temp = temp.next
+        raise ValueError(f'Value {value} does not exist in the list')
 
     def to_list(self):
         # organize the data with an array
@@ -187,23 +188,3 @@ class UnrolledLinkedList:
             for elist in olist:
                 newobj.add(elist)
             return newobj
-#%%
-# ull = UnrolledLinkedList(4)
-# ull.add(1)
-# ull.add(2)
-# ull.add(3)
-# ull.add(4)
-# ull.add(5)
-# ull.add(6)
-
-# a = iter(ull)
-# b = iter(ull)
-# next(a)
-# ull.__iter__('a')
-# ull.__iter__('b')
-
-
-
-
-
-
