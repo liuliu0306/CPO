@@ -96,7 +96,7 @@ class UnrolledLinkedList:
                     temp.length -= 1
                     while temp.length < (self.capacity // 2) and temp.next:
                         temp.array[temp.length] = temp.next.array.pop(0)
-                        temp.length +=1
+                        temp.length += 1
                         temp.next.length -= 1
                     if temp.next and temp.next.length < (self.capacity // 2):
                         t = temp.length
@@ -152,7 +152,7 @@ class UnrolledLinkedList:
 
     def ull_filter(self, condition='iseven'):
         if (condition == 'iseven'):
-            [self.remove(cyi,'list') for cyi in range(self.size()//2)]
+            [self.remove(cyi, 'list') for cyi in range(self.size()//2)]
 
     def ull_map(self, function):
         p = self.head
