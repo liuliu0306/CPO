@@ -51,8 +51,6 @@ Initial
 
 - 25.04.2022 - 0
 
-Issue
-
 1. Bad naming. Read about how to name modules and tests for them
 2. Update GitHub action configuration from the template
 3. Incorrect concat  implementation. Check the task. Rewrite tests
