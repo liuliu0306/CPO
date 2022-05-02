@@ -42,13 +42,11 @@ and `Node` class with more than 18 methods.
 - 13.04.2022 - 0
 
 Initial
-
 1. Implement `UnrolledLinkedList.py` and `ull_test.py`.
 2. GitHub active successfully.
 3. Update README.
 
 - 25.04.2022 - 0
-
 1. Module has been renamed.
 2. Updated GitHub action configuration from the template.
 3. Rewritten concat method.
