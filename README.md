@@ -51,13 +51,21 @@ Initial
 
 - 25.04.2022 - 0
 
-1 Module has been renamed.  2 Updated GitHub action configuration from the
-template. 3  Rewritten concat method.
-4  Tested all monoid properties with PBT.
-5  Rewritten test_add_and_remove method.
-6  Make `capacity` argument optimal for UnrolledLinkedList
-constructor. 7  Rewrite the iterator
+1.Module has been renamed.
+2.Updated GitHub action configuration from the
+template.
+3.Rewritten concat method.
+4.Tested all monoid properties with PBT.
+5.Rewritten test_add_and_remove method.
+6.Make `capacity` argument optimal for UnrolledLinkedList
+constructor.
+7.Rewrite the iterator
 
 - 25.04.2022 - 1
 
 1. All the above tasks are completed!
+
+- 02.05.2022 - 0
+1. Rename ull_test.py to unrolled_linked_list_test.py.
+2. Add test associativity in sequence of concatenations.
+3. Add test which demonstrates how capacity can increase.
