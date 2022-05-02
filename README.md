@@ -43,9 +43,9 @@ and `Node` class with more than 18 methods.
 
 Initial
 
-1. Implement `UnrolledLinkedList.py` and `ull_test.py`
-2. GitHub active successfully
-3. Update README
+1. Implement `UnrolledLinkedList.py` and `ull_test.py`.
+2. GitHub active successfully.
+3. Update README.
 
 - 25.04.2022 - 0
 
@@ -55,7 +55,7 @@ Initial
 4. Tested all monoid properties with PBT.
 5. Rewritten test_add_and_remove method.
 6. Make `capacity` argument optimal for UnrolledLinkedList constructor.
-7. Rewrite the iterator
+7. Rewrite the iterator.
 
 - 25.04.2022 - 1
 
