@@ -28,10 +28,9 @@ and `Node` class with more than 18 methods.
 ## Contribution
 
 - Liu Riheng
-1. Define data structures and implement basic methods such as adding,
-deleting, traversal, etc.
-3. Implement `ull_test.py` which include unit and PBT tests.
-4. Complete readme and GitHub active.
+1. Define data structures and implement basic methods.
+2. Implement `ull_test.py` which include unit and PBT tests.
+3. Complete readme and GitHub active.
 
 - Chen Weite
 1. Implement other methods of UnrolledLinkedList.
