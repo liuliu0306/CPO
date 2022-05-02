@@ -40,7 +40,6 @@ and `Node` class with more than 18 methods.
 ## Changelog
 
 - 13.04.2022 - 0
-
 1. Initial.
 2. Implement `UnrolledLinkedList.py` and `ull_test.py`.
 3. GitHub active successfully.
@@ -56,7 +55,6 @@ and `Node` class with more than 18 methods.
 7. Rewrite the iterator.
 
 - 25.04.2022 - 1
-
 1. All the above tasks are completed!
 
 - 02.05.2022 - 0
