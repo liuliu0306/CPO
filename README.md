@@ -61,3 +61,9 @@ and `Node` class with more than 18 methods.
 1. Rename `ull_test.py` to `unrolled_linked_list_test.py`.
 2. Add test associativity in sequence of concatenations.
 3. Add test which demonstrates how capacity can increase.
+
+- 08.05.2022 - 0
+1. Test separately for each monoid (Associativity and Identity) attribute.
+2. Remove “print” inside tests.
+3. Test how it dynamically extended instead of initialisation stage.
+
