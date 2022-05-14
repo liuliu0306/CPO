@@ -67,3 +67,5 @@ and `Node` class with more than 18 methods.
 2. Remove “print” inside tests.
 3. Test how it dynamically extended instead of initialisation stage.
 
+- 14.05.2022 - 0
+1. Fixed test_monoid_associativity_PBT which satisfy (a.b).c = a.(b.c).
