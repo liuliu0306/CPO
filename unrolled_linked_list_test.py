@@ -147,8 +147,11 @@ class TestMutableULList(unittest.TestCase):
         ull_a.from_list(a[:3])
         ull_b.from_list(a[3:7])
         ull_c.from_list(a[7:])
+        # (a.b).c
         ie1 = ull_a.concat(ull_b).concat(ull_c).to_list()
-        ie2 = ull_b.concat(ull_c).concat(ull_a).to_list()
+        # a.(b.c)
+        ie2 = ull_a.concat(ull_b.concat(ull_c)).to_list()
+        # (a.b).c = a.(b.c)
         self.assertEqual(ie1, ie2)
 
 
